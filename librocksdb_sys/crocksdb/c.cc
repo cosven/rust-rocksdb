@@ -3127,7 +3127,7 @@ void crocksdb_options_set_doubly_skip_list_rep(crocksdb_options_t* opt) {
   opt->rep.memtable_factory.reset(factory);
 }
 
-void rocksdb_options_set_adaptive_radix_tree_rep(rocksdb_options_t* opt) {
+void crocksdb_options_set_adaptive_radix_tree_rep(crocksdb_options_t* opt) {
   rocksdb::MemTableRepFactory* factory = new rocksdb::AdaptiveRadixTreeFactory();
   opt->rep.memtable_factory.reset(factory);
 }
