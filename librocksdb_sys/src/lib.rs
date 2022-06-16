@@ -720,6 +720,7 @@ extern "C" {
         a2: i32,
     );
     pub fn crocksdb_options_set_doubly_skip_list_rep(options: *mut Options);
+    pub fn crocksdb_options_set_adaptive_radix_tree_rep(options: *mut Options);
     pub fn crocksdb_options_set_compaction_style(options: *mut Options, cs: DBCompactionStyle);
     pub fn crocksdb_options_set_fifo_compaction_options(
         options: *mut Options,
