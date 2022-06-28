@@ -1263,6 +1263,12 @@ impl DBOptions {
         }
     }
 
+    pub fn set_adaptive_radix_tree(&self) {
+        unsafe {
+            crocksdb_ffi::crocksdb_options_set_adaptive_radix_tree_rep(self.inner);
+        }
+    }
+
     pub fn get_memtable_name(&self) -> Option<&str> {
         unsafe {
             let memtable_name =
@@ -1890,6 +1896,12 @@ impl ColumnFamilyOptions {
     pub fn set_doubly_skiplist(&self) {
         unsafe {
             crocksdb_ffi::crocksdb_options_set_doubly_skip_list_rep(self.inner);
+        }
+    }
+
+    pub fn set_adaptive_radix_tree(&self) {
+        unsafe {
+            crocksdb_ffi::crocksdb_options_set_adaptive_radix_tree_rep(self.inner);
         }
     }
 
